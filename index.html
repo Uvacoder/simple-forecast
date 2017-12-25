@@ -12,6 +12,8 @@
       <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!-- Font Awesome -->
+      <script src="https://use.fontawesome.com/512a791d9f.js"></script>
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
       <!-- Material Icons -->
@@ -23,7 +25,29 @@
     </head>
   </head>
   <body>
-    
+    <div id="bkg">
+      <div id="shade-bkg"></div>
+      <div id="bkg-img"></div>
+    </div>
+    <div id="body">
+      <div id="logo">
+        <img class='logo-content' id="img" src="media/logo.svg" alt='App Logo'/>
+        <span class='logo-content' id='logo-divider'></span>
+        <h5 class='logo-content' id="app-name">Forecast</h5>
+      </div>
+      <div id="main-data">
+        <p id="city">Nashville</p>
+        <div id="status"></div>
+        <h1 id="temp">25&deg;C</h1>
+      </div>
+      <div id="menus">
+        <div class="options active-scale" id="celcius">&deg;C</div>
+        <div class="options" id="fahrenheit">&deg;F</div>
+      </div>
+      <p id="dev">
+        Made with <i class="fa fa-heart"></i> by <a href="http://dawitcodes.com">Dawit</a>
+      </p>
+    </div>
     <!-- Custom JavaScript -->
     <script src="js/main.js" charset="utf-8"></script>
   </body>
