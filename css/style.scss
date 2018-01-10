@@ -40,7 +40,7 @@
   appearance: none !important;
   outline: none !important;
   @include transition(0.3s);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 // Every Link
 a {
@@ -57,28 +57,18 @@ i, #logo {
   user-select: none;
 }
 // Background
-#bkg {
-  z-index: 0;
-  #shade-bkg, #bkg-img {
-    @include size(100%, 100vh);
-    display: inline-block;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-  }
-  #shade-bkg {
-    @include bkg(#000);
-    opacity: 0.4;
-    z-index: -1;
-  }
-  #bkg-img {
-    @include bkg(#000);
-    z-index: -2;
-    background-image: url('../media/cloudy.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+#bkg-img {
+  @include size(100%, 100vh);
+  display: inline-block;
+  z-index: -1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-image: url('../media/cloudy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
 }
 // Main body
 #body {
@@ -86,7 +76,7 @@ i, #logo {
   #logo {
     width: 126px;
     height: 45px;
-    margin: 50px auto;
+    margin: 40px auto;
     .logo-content {
       display: inline-block;
       height: 45px;
@@ -114,38 +104,61 @@ i, #logo {
     }
   }
   #main-data {
-    @include bkg(#fff);
+    @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
-    @include size(300px, 200px);
-    border-bottom: 10px solid #3498db;
+    width: 300px;
+    height: 160px;
     margin: 20px auto;
     padding: 15px;
+    border-radius: 5px !important;
+    text-align: center;
+    overflow: hidden;
     p {
-      width: 100%;
-      text-align: center;
       font-weight: bold;
+      color: #fff;
       text-decoration: underline;
       text-decoration-color: #3498db;
     }
     #status {
-      @include size(30px, 30px);
+      @include size(40px, 40px);
       margin: 15px auto;
-      background-image: url('../media/cloudy.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      display: none;
     }
     h1 {
-      width: 100%;
-      text-align: center;
       color: #3498db;
+      margin-bottom: 20px;
+    }
+    .errorMsg {
+      margin: auto;
+      width: 70%;
+      line-height: 2;
+      color: #fff;
+    }
+    table {
+      display: none;
+      border: none;
+      border-collapse: collapse;
+      width: 90%;
+      margin: auto;
+      td {
+        border: none;
+        color: #fff;
+        padding: 3px;
+        &:first-of-type {
+          text-align: left;
+        }
+        &:last-of-type {
+          text-align: right;
+        }
+      }
     }
   }
   #menus {
-    @include size(100px, 50px);
-    @include bkg(#fff);
+    @include size(150px, 50px);
+    @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     margin: 25px auto;
+    border-radius: 2.5px !important;
     .options {
       @include size(50px, 30px);
       cursor: pointer;
@@ -154,12 +167,22 @@ i, #logo {
       margin-top: 10px;
       text-align: center;
       line-height: 30px;
+      display: inline-block;
+      user-select: none;
+      border-left: 1px solid rgba(255,255,255,0.4);
+      &:first-of-type {
+        border: none;
+      }
     }
-    .active-scale {
-      font-weight: bold;
-    }
-    #fahrenheit {
-      border-left: 1px solid #ddd;
+    .icon-rotate {transform: rotate(180deg);}
+    .underline {
+      width: 50px;
+      height: 1px;
+      display: block;
+      border-radius: 0.5px !important;
+      background: #fff;
+      position: relative;
+      top: 49px;
     }
   }
   #dev {
@@ -168,8 +191,8 @@ i, #logo {
     position: absolute;
     color: #fff;
     bottom: 25px;
-    i {
-      color: #e74c3c;
+    a {
+      color: #3498db;
     }
   }
 }
