@@ -76,7 +76,7 @@ i, #logo {
   #logo {
     width: 126px;
     height: 45px;
-    margin: 40px auto;
+    margin: 40px auto 50px auto;
     .logo-content {
       display: inline-block;
       height: 45px;
@@ -107,8 +107,8 @@ i, #logo {
     @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     width: 300px;
-    height: 160px;
-    margin: 20px auto;
+    height: 175px;
+    margin: 100px auto 20px auto;
     padding: 15px;
     border-radius: 5px !important;
     text-align: center;
@@ -126,7 +126,7 @@ i, #logo {
     }
     h1 {
       color: #3498db;
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
     .errorMsg {
       margin: auto;
@@ -154,10 +154,10 @@ i, #logo {
     }
   }
   #menus {
-    @include size(150px, 50px);
+    @include size(200px, 50px);
     @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
-    margin: 25px auto;
+    margin: 25px auto 5px auto;
     border-radius: 2.5px !important;
     .options {
       @include size(50px, 30px);
@@ -186,13 +186,26 @@ i, #logo {
     }
   }
   #dev {
-    width: 100%;
+    @include bkg(rgba(0,0,0,0.6));
+    @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
+    width: 300px;
+    min-height: 60px;
+    margin: 5px auto;
+    display: none;
+    border-radius: 2.5px !important;
+    padding: 10px 2.5px;
     text-align: center;
-    position: absolute;
     color: #fff;
-    bottom: 25px;
     a {
       color: #3498db;
+    }
+    &:before {
+      float: right;
+      content: '';
+      border-style: solid;
+      border-width: 7px;
+      border-color: transparent transparent rgba(0,0,0,0.6) transparent;
+      margin: -22.5px 65px 0px 0px;
     }
   }
 }

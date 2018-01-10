@@ -42,7 +42,7 @@ i, #logo {
   #body #logo {
     width: 126px;
     height: 45px;
-    margin: 40px auto; }
+    margin: 40px auto 50px auto; }
     #body #logo .logo-content {
       display: inline-block;
       height: 45px;
@@ -72,8 +72,8 @@ i, #logo {
     -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     width: 300px;
-    height: 160px;
-    margin: 20px auto;
+    height: 175px;
+    margin: 100px auto 20px auto;
     padding: 15px;
     border-radius: 5px !important;
     text-align: center;
@@ -90,7 +90,7 @@ i, #logo {
       display: none; }
     #body #main-data h1 {
       color: #3498db;
-      margin-bottom: 20px; }
+      margin-bottom: 35px; }
     #body #main-data .errorMsg {
       margin: auto;
       width: 70%;
@@ -111,7 +111,7 @@ i, #logo {
         #body #main-data table td:last-of-type {
           text-align: right; }
   #body #menus {
-    width: 150px;
+    width: 200px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
@@ -119,7 +119,7 @@ i, #logo {
     -ms-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    margin: 25px auto;
+    margin: 25px auto 5px auto;
     border-radius: 2.5px !important; }
     #body #menus .options {
       width: 50px;
@@ -146,12 +146,28 @@ i, #logo {
       position: relative;
       top: 49px; }
   #body #dev {
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    min-height: 60px;
+    margin: 5px auto;
+    display: none;
+    border-radius: 2.5px !important;
+    padding: 10px 2.5px;
     text-align: center;
-    position: absolute;
-    color: #fff;
-    bottom: 25px; }
+    color: #fff; }
     #body #dev a {
       color: #3498db; }
+    #body #dev:before {
+      float: right;
+      content: '';
+      border-style: solid;
+      border-width: 7px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
+      margin: -22.5px 65px 0px 0px; }
 
 /*# sourceMappingURL=style.css.map */

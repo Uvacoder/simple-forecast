@@ -3,6 +3,7 @@ const temp = document.querySelector('#temp');
 const errorMsg = document.querySelector('.errorMsg');
 const city = document.querySelector('#city');
 const options = document.querySelectorAll('.options');
+const iconInfo = document.querySelector('#dev');
 const underline = document.querySelector('.underline');
 const cloudCover = document.querySelector('.cloud-cover');
 const humidityMeasure = document.querySelector('.humidity');
@@ -49,13 +50,23 @@ function success(position) {
       } else if (this.id == 'more') {
         underline.style.transform = 'translateX(100px)';
         this.children[0].classList.toggle('icon-rotate');
+        if (iconInfo.style.display == 'block') {
+          iconInfo.style.display = 'none';
+        }
         if (this.children[0].classList.contains('icon-rotate')) {
           mainData.style.height = '350px';
-          mainData.style.marginTop = '-30px';
+          mainData.style.marginTop = '-25px';
         } else {
           mainData.style.height = '160px';
-          mainData.style.marginTop = '0px';
+          mainData.style.marginTop = '100px';
         }
+      } else if (this.id == 'info') {
+        if (iconInfo.style.display == 'none') {
+          iconInfo.style.display = 'block';
+        } else {
+          iconInfo.style.display = 'none';
+        }
+
       } else {
         underline.style.transform = 'translateX(0px)';
         temp.innerHTML = `${celcius}&deg;C`;
