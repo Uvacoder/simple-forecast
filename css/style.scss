@@ -64,7 +64,8 @@ i, #logo {
   position: fixed;
   top: 0px;
   left: 0px;
-  background-image: url('../media/cloudy.jpg');
+  background: rgba(0,0,0,0.5);
+  // background-image: url('../media/cloudy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -116,6 +117,7 @@ i, #logo {
     p {
       font-weight: bold;
       color: #fff;
+      display: inline-block;
       text-decoration: underline;
       text-decoration-color: #3498db;
     }
@@ -154,11 +156,12 @@ i, #logo {
     }
   }
   #menus {
-    @include size(200px, 50px);
+    @include size(250px, 50px);
     @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     margin: 25px auto 5px auto;
     border-radius: 2.5px !important;
+    overflow: hidden;
     .options {
       @include size(50px, 30px);
       cursor: pointer;
@@ -183,14 +186,15 @@ i, #logo {
       background: #fff;
       position: relative;
       top: 49px;
+      transition-timing-function: cubic-bezier(0.65, 0.25, 0.18, 1.35);
     }
   }
-  #dev {
+  .dev {
     @include bkg(rgba(0,0,0,0.6));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     width: 300px;
     min-height: 60px;
-    margin: 5px auto;
+    margin: 10px auto;
     display: none;
     border-radius: 2.5px !important;
     padding: 10px 2.5px;
@@ -205,7 +209,8 @@ i, #logo {
       border-style: solid;
       border-width: 7px;
       border-color: transparent transparent rgba(0,0,0,0.6) transparent;
-      margin: -22.5px 65px 0px 0px;
+      margin: -22.5px 40px 0px 0px;
     }
   }
+  .display {display: block;}
 }
