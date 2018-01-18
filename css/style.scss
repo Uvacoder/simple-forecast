@@ -56,24 +56,17 @@ i, #logo {
   -ms-user-select: none;
   user-select: none;
 }
-// Background
-#bkg-img {
-  @include size(100%, 100vh);
-  display: inline-block;
-  z-index: -1;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgba(0,0,0,0.5);
-  // background-image: url('../media/cloudy.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(50%);
-}
 // Main body
 #body {
+  @include size(100%, 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
   #logo {
     width: 126px;
     height: 45px;
@@ -104,12 +97,44 @@ i, #logo {
       margin-top: 0px;
     }
   }
+  .search-wrapper {
+    @include bkg(rgba(0,0,0,0.75));
+    width: 300px;
+    height: 0px;
+    border-radius: 5px !important;
+    margin: 45px auto 0px auto;
+    overflow: hidden;
+    .search-elements {
+      float: left;
+    }
+    .search-input {
+      @include bkg(transparent);
+      width: 265px;
+      height: 35px;
+      border: none;
+      padding: 0px 10px;
+      color: #fff;
+      line-height: 35px;
+    }
+    .search {
+      @include bkg(transparent);
+      width: 35px;
+      height: 25px;
+      border-left: 1px solid rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 25px;
+      margin-top: 5px;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+    }
+  }
+  .toggled-search {
+    height: 35px;
+  }
   #main-data {
-    @include bkg(rgba(0,0,0,0.6));
+    @include bkg(rgba(0,0,0,0.75));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     width: 300px;
-    height: 175px;
-    margin: 100px auto 20px auto;
     padding: 15px;
     border-radius: 5px !important;
     text-align: center;
@@ -155,9 +180,17 @@ i, #logo {
       }
     }
   }
+  .collapsed-data {
+    height: 175px;
+    margin: 15px auto 20px auto;
+  }
+  .expanded-data {
+    height: 350px;
+    margin: -25px auto 20px auto;
+  }
   #menus {
-    @include size(250px, 50px);
-    @include bkg(rgba(0,0,0,0.6));
+    @include size(300px, 50px);
+    @include bkg(rgba(0,0,0,0.75));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     margin: 25px auto 5px auto;
     border-radius: 2.5px !important;
@@ -190,7 +223,7 @@ i, #logo {
     }
   }
   .dev {
-    @include bkg(rgba(0,0,0,0.6));
+    @include bkg(rgba(0,0,0,0.75));
     @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
     width: 300px;
     min-height: 60px;
@@ -208,7 +241,7 @@ i, #logo {
       content: '';
       border-style: solid;
       border-width: 7px;
-      border-color: transparent transparent rgba(0,0,0,0.6) transparent;
+      border-color: transparent transparent rgba(0,0,0,0.75) transparent;
       margin: -22.5px 40px 0px 0px;
     }
   }

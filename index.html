@@ -25,14 +25,19 @@
     </head>
   </head>
   <body>
-    <div id="bkg-img"></div>
     <div id="body">
       <div id="logo">
         <img class='logo-content' id="img" src="media/logo.svg" alt='App Logo'/>
         <span class='logo-content' id='logo-divider'></span>
         <h5 class='logo-content' id="app-name">Forecast</h5>
       </div>
-      <div id="main-data" class="expand">
+      <div class="search-wrapper">
+        <input type="text" class="search-input search-elements" placeholder="Enter city">
+        <div class="search search-elements">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <div id="main-data" class="collapsed-data">
         <p id="city"></p>
         <h5 class="errorMsg"></h5>
         <img src="media/rainy-stat.svg" alt="Status Icons" id="status">
@@ -40,27 +45,27 @@
         <table>
           <tr>
             <td>Humidity</td>
-            <td class='humidity'></td>
+            <td class='humidity'>--</td>
           </tr>
           <tr>
             <td>Wind Speed</td>
-            <td class="wind-speed"></td>
+            <td class="wind-speed">--</td>
           </tr>
           <tr>
             <td>Pressure</td>
-            <td class="pressure"></td>
+            <td class="pressure">--</td>
           </tr>
           <tr>
             <td>Cloudiness</td>
-            <td class="cloud-cover"></td>
+            <td class="cloud-cover">--</td>
           </tr>
           <tr>
             <td>Sunrise</td>
-            <td class="sunrise"></td>
+            <td class="sunrise">--</td>
           </tr>
           <tr>
             <td>Sunset</td>
-            <td class="sunset"></td>
+            <td class="sunset">--</td>
           </tr>
         </table>
       </div>
@@ -70,8 +75,11 @@
         <div class="options" id="more">
           <i class="fas fa-chevron-circle-down"></i>
         </div>
-        <div class="options search">
+        <div class="options" id="toggle-search">
           <i class="fas fa-search"></i>
+        </div>
+        <div class="options" id="your-location">
+          <i class="fas fa-map-marker"></i>
         </div>
         <div class="options" id="info">
           <i class="fas fa-info-circle"></i>
