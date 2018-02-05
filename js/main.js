@@ -208,7 +208,7 @@ searchBtn.addEventListener('click',function() {
 
 // Function to execute if Geolocation fails
 function fail(error) {
-  const errorIcon = "<i class='fas fa-exclamation-triangle'></i>"
+  const errorIcon = "<i class='ion-android-warning'></i>"
   errorMsg.innerHTML = `${errorIcon} An error occurred. Please reload to try again.`;
   image.style.backgroundImage = "url('media/other.jpg')";
 }
