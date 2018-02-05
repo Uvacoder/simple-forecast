@@ -77,7 +77,8 @@ i, #logo {
       border: none;
       padding: 0px 10px;
       color: #fff;
-      line-height: 35px; }
+      line-height: 35px;
+      font-size: 16px; }
     #body .search-wrapper .search {
       background-color: transparent;
       width: 35px;
