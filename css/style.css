@@ -4,7 +4,8 @@
   -moz-appearance: none !important;
   -ms-appearance: none !important;
   -o-appearance: none !important;
-  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none;
   outline: none !important;
   transition: 0.3s;
   -o-transition: 0.3s;
@@ -37,12 +38,13 @@ i, #logo {
   #body #logo {
     width: 126px;
     height: 45px;
-    margin: 40px auto 50px auto; }
+    margin: 40px auto 50px auto;
+    background: none; }
     #body #logo .logo-content {
-      display: inline-block;
       height: 45px;
       float: left;
-      line-height: 45px; }
+      line-height: 45px;
+      background: none; }
     #body #logo #img {
       width: 45px;
       height: 45px;
@@ -105,26 +107,33 @@ i, #logo {
       color: #fff;
       display: inline-block;
       text-decoration: underline;
-      text-decoration-color: #3498db; }
+      text-decoration-color: #3498db;
+      background: none; }
     #body #main-data #status {
       width: 40px;
       height: 40px;
       margin: 15px auto;
-      display: none; }
+      display: none;
+      background: none; }
     #body #main-data h1 {
       color: #3498db;
-      margin-bottom: 35px; }
+      margin-bottom: 35px;
+      background: none; }
     #body #main-data .errorMsg {
       margin: auto;
       width: 70%;
       line-height: 2;
-      color: #fff; }
+      color: #fff;
+      background: none; }
     #body #main-data table {
       display: none;
       border: none;
       border-collapse: collapse;
       width: 90%;
-      margin: auto; }
+      margin: auto;
+      background: none; }
+      #body #main-data table tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
       #body #main-data table td {
         border: none;
         color: #fff;
@@ -135,9 +144,9 @@ i, #logo {
           text-align: right; }
   #body .collapsed-data {
     height: 175px;
-    margin: 15px auto 20px auto; }
+    margin: 35px auto 20px auto; }
   #body .expanded-data {
-    height: 350px;
+    height: 360px;
     margin: -25px auto 20px auto; }
   #body #menus {
     width: 300px;
@@ -160,13 +169,13 @@ i, #logo {
       margin-top: 10px;
       text-align: center;
       line-height: 30px;
-      display: inline-block;
       user-select: none;
-      border-left: 1px solid rgba(255, 255, 255, 0.4); }
+      background: none;
+      border-left: 0.5px solid rgba(255, 255, 255, 0.2); }
       #body #menus .options:first-of-type {
         border: none; }
-    #body #menus .icon-rotate {
-      transform: rotate(180deg); }
+      #body #menus .options i {
+        font-size: 18px; }
     #body #menus .underline {
       width: 50px;
       height: 1px;
@@ -188,7 +197,7 @@ i, #logo {
     margin: 10px auto;
     display: none;
     border-radius: 2.5px !important;
-    padding: 10px 2.5px;
+    padding: 10px 5px;
     text-align: center;
     color: #fff; }
     #body .dev a {
@@ -199,7 +208,7 @@ i, #logo {
       border-style: solid;
       border-width: 7px;
       border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
-      margin: -22.5px 40px 0px 0px; }
+      margin: -22.5px 15px 0px 0px; }
   #body .display {
     display: block; }
 

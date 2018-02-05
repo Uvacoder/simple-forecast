@@ -37,7 +37,8 @@
   -moz-appearance: none !important;
   -ms-appearance: none !important;
   -o-appearance: none !important;
-  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none;
   outline: none !important;
   @include transition(0.3s);
   font-family: 'Quicksand', sans-serif;
@@ -71,11 +72,12 @@ i, #logo {
     width: 126px;
     height: 45px;
     margin: 40px auto 50px auto;
+    background: none;
     .logo-content {
-      display: inline-block;
       height: 45px;
       float: left;
       line-height: 45px;
+      background: none;
     }
     #img {
       width: 45px;
@@ -145,21 +147,25 @@ i, #logo {
       display: inline-block;
       text-decoration: underline;
       text-decoration-color: #3498db;
+      background: none;
     }
     #status {
       @include size(40px, 40px);
       margin: 15px auto;
       display: none;
+      background: none;
     }
     h1 {
       color: #3498db;
       margin-bottom: 35px;
+      background: none;
     }
     .errorMsg {
       margin: auto;
       width: 70%;
       line-height: 2;
       color: #fff;
+      background: none;
     }
     table {
       display: none;
@@ -167,6 +173,10 @@ i, #logo {
       border-collapse: collapse;
       width: 90%;
       margin: auto;
+      background: none;
+      tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
       td {
         border: none;
         color: #fff;
@@ -182,10 +192,10 @@ i, #logo {
   }
   .collapsed-data {
     height: 175px;
-    margin: 15px auto 20px auto;
+    margin: 35px auto 20px auto;
   }
   .expanded-data {
-    height: 350px;
+    height: 360px;
     margin: -25px auto 20px auto;
   }
   #menus {
@@ -203,14 +213,16 @@ i, #logo {
       margin-top: 10px;
       text-align: center;
       line-height: 30px;
-      display: inline-block;
       user-select: none;
-      border-left: 1px solid rgba(255,255,255,0.4);
+      background: none;
+      border-left: 0.5px solid rgba(255,255,255,0.2);
       &:first-of-type {
         border: none;
       }
+      i { 
+        font-size: 18px;
+      }
     }
-    .icon-rotate {transform: rotate(180deg);}
     .underline {
       width: 50px;
       height: 1px;
@@ -230,7 +242,7 @@ i, #logo {
     margin: 10px auto;
     display: none;
     border-radius: 2.5px !important;
-    padding: 10px 2.5px;
+    padding: 10px 5px;
     text-align: center;
     color: #fff;
     a {
@@ -242,7 +254,7 @@ i, #logo {
       border-style: solid;
       border-width: 7px;
       border-color: transparent transparent rgba(0,0,0,0.75) transparent;
-      margin: -22.5px 40px 0px 0px;
+      margin: -22.5px 15px 0px 0px;
     }
   }
   .display {display: block;}
