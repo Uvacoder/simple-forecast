@@ -82,7 +82,7 @@ function success(position) {
 // Get Weather data
 function getData(coordinate) {
   // API URL
-  const url = `https://api.openweathermap.org/data/2.5/weather?${coordinate}&appid=0036c88f0dd7246332045207bf44130f&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?${coordinate}&appid=d65b8d6e7cd52afeffa614a154a75840&units=metric`;
   // Get JSON Data about weather
   $.getJSON(url,function(data) {
     // Get Temperature in Celcius
