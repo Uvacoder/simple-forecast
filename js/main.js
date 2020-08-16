@@ -232,7 +232,7 @@ searchBtn.addEventListener("click", function () {
 
 // Function to execute if Geolocation fails
 function fail(error) {
-	const errorIcon = "<i class='ion-android-warning'></i>";
+	const errorIcon = "<span>⚠</span>";
 	errorMsg.innerHTML = `${errorIcon} An error occurred. Please reload to try again.`;
 	image.style.backgroundImage = "url('media/other.jpg')";
 }
