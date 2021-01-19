@@ -21,6 +21,8 @@ const pressureMeasure = document.querySelector(".pressure"); // Pressure
 const sunRise = document.querySelector(".sunrise"); // Sunrise time
 const sunSet = document.querySelector(".sunset"); // Sunset time
 
+const APIKey = "83dcb5fad6d68710089f5946b674a5ba";
+
 let currLatitude;
 let currLongitude;
 
@@ -85,7 +87,7 @@ function success(position) {
 // Get Weather data
 function getData(coordinate) {
 	// API URL
-	const url = `https://api.openweathermap.org/data/2.5/weather?${coordinate}&appid=8faf90c0aabad5419b5f61e5ee0a77a7&units=metric`;
+	const url = `https://api.openweathermap.org/data/2.5/weather?${coordinate}&appid=${APIKey}&units=metric`;
 	// Get JSON Data about weather
 	$.getJSON(url, function (data) {
 		// Get Temperature in Celcius
@@ -202,7 +204,7 @@ document.querySelector("#your-location").addEventListener("click", () => {
 input.addEventListener("keypress", function (e) {
 	if (this.value && e.keyCode == 13) {
 		const cityName = this.value;
-		const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=8faf90c0aabad5419b5f61e5ee0a77a7&units=metric`;
+		const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKey}&units=metric`;
 		errorMsg.innerHTML = "";
 		$.getJSON(url, function (data) {
 			const lat = data.coord.lat;
@@ -217,7 +219,7 @@ input.addEventListener("keypress", function (e) {
 searchBtn.addEventListener("click", function () {
 	if (input.value) {
 		const cityName = input.value;
-		const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=8faf90c0aabad5419b5f61e5ee0a77a7&units=metric`;
+		const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKey}&units=metric`;
 		errorMsg.innerHTML = "";
 		$.getJSON(url, function (data) {
 			const lat = data.coord.lat;
