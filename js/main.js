@@ -21,7 +21,7 @@ const pressureMeasure = document.querySelector(".pressure"); // Pressure
 const sunRise = document.querySelector(".sunrise"); // Sunrise time
 const sunSet = document.querySelector(".sunset"); // Sunset time
 
-const APIKey = "83dcb5fad6d68710089f5946b674a5ba";
+const APIKey = "3ea64c578c387dbcb25e4ef16486eed1";
 
 let currLatitude;
 let currLongitude;
